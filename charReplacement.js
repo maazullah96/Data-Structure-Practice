@@ -12,14 +12,18 @@ var characterReplacement = function (s, k) {
   for (let winEnd = 0; winEnd < s.length; winEnd++) {
     let char = s[winEnd]
     hashMap[char] = hashMap[char] + 1 || 1
+    hashMap
     maxFreq = Math.max(hashMap[char], maxFreq)
+    maxFreq
     let window = winEnd - winStart + 1
     let remaining = window - maxFreq
+    remaining
     if (remaining > k) {
       hashMap[s[winStart]] -= 1
       winStart += 1
     }
     max = Math.max(winEnd - winStart + 1, max)
+    max
   }
   return max
 }
