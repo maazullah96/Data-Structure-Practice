@@ -20,3 +20,18 @@ s
 console.log(s)
 
 console.log(s['a'])
+
+const k1 = { fruit: '🥝' }
+const k2 = { fruit: '🥝' }
+
+console.log(Object.keys(k1))
+console.log(Object.keys(k2))
+//
+
+if (Object.keys(k1) === Object.keys(k2)) {
+  console.log('k1 <==> k2')
+} else {
+  console.log('k1 <==> k2')
+}
+
+console.log(Object.keys(k2))
