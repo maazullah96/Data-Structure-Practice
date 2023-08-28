@@ -22,6 +22,7 @@ function minWindow(s, t) {
     // const rightChar = s[end]
 
     // if( )
+
     if (dic.hasOwnProperty(s[end])) {
       console.log(dic)
       console.log(s)
@@ -63,6 +64,6 @@ function minWindow(s, t) {
 
 // Example usage
 const s = 'ABDDDDD'
-const t = 'ABCD'
+const t = 'ABC'
 const result = minWindow(s, t)
 console.log(result) // Output: "BANC"

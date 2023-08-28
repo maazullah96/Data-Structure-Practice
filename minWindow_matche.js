@@ -18,11 +18,13 @@ function minWindow(s, t) {
 
   // Iterate through the loop till we reach the end of string S
   while (end < n) {
+    dic
+    console.log(s[end])
     if (dic.hasOwnProperty(s[end])) {
-      if (dic[s[end]] > 0) {
+      dic[s[end]]--
+      if (dic[s[end]] >= 0) {
         matched++
       }
-      dic[s[end]]--
     }
     end++
 
