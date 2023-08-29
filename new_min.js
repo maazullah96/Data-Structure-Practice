@@ -27,7 +27,8 @@ function minWindow(s, t) {
       console.log(matched)
       console.log(t.length)
     }
-
+    let subStr = s.substring(winStart, winEnd + 1)
+    subStr
     if (winEnd - winStart + 1 < minLen) {
       // winStart+=1
       let leftChar = charFreq[winStart]
@@ -38,6 +39,7 @@ function minWindow(s, t) {
         charFreq[leftChar] += 1
         winStart += 1
       }
+      console.log(charFreq)
     }
   }
 }
