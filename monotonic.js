@@ -5,8 +5,6 @@ function increasing_monotonic_queue(arr, n) {
 
   for (let i = 0; i < n; i++) {
     // If recently added element is greater than the current element
-    console.log(q)
-    // console.log(arr[i])
 
     while (q.length > 0 && q[q.length - 1] > arr[i]) {
       q.pop()
