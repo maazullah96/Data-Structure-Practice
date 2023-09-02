@@ -30,26 +30,54 @@ var nextGreaterElement = function (nums1, nums2) {
 var nextGreaterElement = function (nums1, nums2) {
   map = {}
   for (let i = 0; i < nums1.length; i++) {
-    map[nums1[i]] = true
+    map[nums1[i]] = i
   }
   map
   let result = Array.from({ length: nums1.length }, (_, i) => -1)
   //   result
+  console.log(map)
+  nge ={}
+  console.log(result);
+  stack = []
   for (let i = 0; i < nums2.length; i++) {
+
     const num = nums2[i]
-    console.log(num)
-    if (num in map) {
-      num
-      let nextFound = false
-      for (let j = i + 1; j < nums2.length; j++) {
-        if (nums2[j] > num) {
-          result[i] = nums2[j]
-          break
-        }
-      }
+    num
+    while (stack.length > 0 && stack[stack.length-1] < num){
+      stack
+      nge[stack.pop()] = num
+      // stack.pop()
     }
+    stack.push(num)
+    console.log(stack)
+    nge
+
+    nge
+    let index =0;
+    
+    result
+    // if (num in map) {
+    //   let index= map[num];
+    //   console.log(index);
+    //   console.log(result[index]); 
+      
+  //     let nextFound = false
+  //     for (let j = i + 1; j < nums2.length; j++) {
+  //       if (nums2[j] > num) {
+  //         result[i] = nums2[j]
+  //         break
+  //       }
+  //     }
+    // }
   }
   result
+  stack
 }
 
-let test = nextGreaterElement(nums1, nums2)[(-1, 3, -1)]
+let nums1 = [4,1,2]
+let nums2 = [1,3,4,2]
+
+let test = nextGreaterElement(nums1, nums2)
+console.log(test)
+
+(-1, 3, -1)
