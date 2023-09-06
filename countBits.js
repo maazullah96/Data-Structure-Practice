@@ -29,6 +29,3 @@ let n = 2
 // console.log(n)
 countBits(n)
 
-// let count =countNoOfOneBits(3)
-// count
-xx = 3
