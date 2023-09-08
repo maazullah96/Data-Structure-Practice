@@ -4,16 +4,20 @@
  */
 var generate = function (numRows) {
     // let numRows = 5;
-    let arr =[];
+    let array =[];
     for(let i=0; i<numRows;i++){
-        arr.push(Array.from({length:i+1},(_)=>1))
-        console.log(arr);
+        array.push(Array.from({ length: i + 1 }, (_) => 1));
+        console.log(array);
     }
-    for(let j=2; j<arr.length;j++){
-        console.log(arr[j]);
-        console.log(arr[j]);
+
+    for (let j = 2; j < array.length; j++) {
+      for (let k = 1; k < array[j].length-1; k++) {
+        array[j][k] = array[j - 1][k - 1] + array[j-1][k];
+        array
+      }
     }
     
+    array;
 };
 
 let gen = generate(5)
