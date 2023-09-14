@@ -22,27 +22,34 @@ var threeSumClosest = function (nums, target) {
             diff = Math.abs(target - sum);
             console.log(diff);
             if(diff < closest_difference){
+                console.log(diff)
                 closest_difference = diff
                 closest_sum = sum
             }
             if (diff==0){
+                sum
                 return sum
             }
             sum
             if(sum >= target){
-                left+=1
-            }else{
+                right
                 right-=1
+            }else{
+                left
+                left+=1
             }  
         }
         }
         closest_sum
+        console.log(closest_sum);
         return closest_sum;
 };
 
 // let nums = [-1,2,1,-4]
 // let target = 1
 
-let nums = [4,0,5,-5,3,3,0,-4,-5]
-target = -2
+// let nums = [4,0,5,-5,3,3,0,-4,-5]
+let nums = [-1,2,1,-4]
+let target = 1
+
 threeSumClosest(nums,target)
