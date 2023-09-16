@@ -3,30 +3,28 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var sortColors = function (nums) {
-    let map = {}
-    console.log(nums)
-for(let i=0;i<nums.length;i++){
-    let num = nums[i]
-    map[num] = map[num]+1 || 1
-    console.log(map)
-    map
-}
+    const counts =[0,0,0]
 
-start =0
-for (let key of Object.keys(map)) {
-  console.log(key, value); // 'a' 1, 'b' 2, 'c' 3
-  let i = start
-  for(i=start;i<start+value;i++){
-    key
-    nums[i] = key;
-    console.log(map[key]);
-  }
-  i
-  start =i
-  start
-}
-nums
+    if(nums.length==0 ){
+        return
+    }
 
+    for (let num of nums){
+        counts[num]+=1
+    }
+    counts
+    let start = 0
+    for(let i=0;i<counts.length;i++){
+        let count = counts[i]
+        console.log(count)
+        let j = start
+        for(;j<start+count;j++){
+            nums[j] = i
+        }
+        start= j
+        
+    }
+    return nums
 };
 
 
