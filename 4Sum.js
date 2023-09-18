@@ -6,8 +6,13 @@
 var fourSum = function (nums, target) {
     console.log(nums)
     console.log(target)
-    for(let i=0;i<nums.length;i++){
-        console.log(nums[i])
+    nums.sort((a,b)=>a-b)
+    for(let a=0;a<nums.length;a++){
+        console.log(nums[a])
+
+        left = a+1
+        // right= left+1;
+
     }
 
 };
