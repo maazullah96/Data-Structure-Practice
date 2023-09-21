@@ -9,14 +9,21 @@ var fourSum = function (nums, target) {
     nums.sort((a,b)=>a-b)
     console.log(nums)
     let results =[]
-    for(let i=0;i<nums.length-2;i++){
-        if(nums[i] ==nums[i-1]){
+    for(let i=0;i<nums.length-3;i++){
+        console.log(i);
+        console.log(nums[i]);
+        console.log(nums[i-1]);
+        if( i>0 &&nums[i] ==nums[i-1]){
             continue
         }
-        for(let j=i+1;j<nums.length-1;j++){
-        //      if(nums[j] ==nums[j-1]){
-        //     continue
-        // }
+        for(let j=i+1;j<nums.length-2;j++){
+            console.log(j);
+            console.log(nums[j]);
+            console.log(nums[j - 1]);
+            console.log(j,i+1)
+             if(j>i+1 && nums[j] ==nums[j-1]){
+            continue
+        }
             j
             let left = j+1;
             let right = nums.length-1;
@@ -37,12 +44,15 @@ var fourSum = function (nums, target) {
                 }
                 sum
                 if (sum == target) {
-                  results.push([nums[i], nums[j], nums[left], nums[right]]);
+                    sum
+                    let arr= [nums[i], nums[j], nums[left], nums[right]]
+                    console.log(arr)
+                  results.push(arr);
                   left+=1
-
                   while(nums[left]!= nums[left-1]){
-                  left += 1;
-                  }
+                      left += 1;
+                    }
+                    left
 
                 }
         }
